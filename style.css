@@ -1,0 +1,236 @@
+/* General styles */
+body {
+  max-width: auto;  /* maximale Breite (kannst du anpassen) */
+  max-height: auto; /* maximale Höhe */
+  margin:  auto;     /* zentriert horizontal */
+  padding: 0 px;    /* Abstand zum Rand, falls kleiner Bildschirm */
+  box-sizing: border-box;
+}
+
+.logo  {
+  background-color: black;
+}
+/* link für dass Logo */
+.logo a {
+  display: flex;
+  font-size: 10px;
+  color: black;
+  text-decoration: none;
+  justify-content: center; 
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #4a9af5; /* hellgrauer Hintergrund */
+}
+
+.header-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 100px;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+
+}
+
+.personal {
+  display: flex;
+  gap: 10px;
+}
+
+.personal a img {
+  width: 50px;
+  height: 50px;
+}
+
+
+/* Container für das bild unter dem header */
+.bild {
+  display: block;
+  width: 100%;
+}
+
+.bild img {
+
+}
+
+main {
+  background-image: url("pictures/7c4908147c4c620726852661e3dac49e.jpg"); /* Pfad ggf. anpassen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Startet den Inhalt am oberen Rand */
+  
+}
+
+/* Container rund um die Suche */
+.container {
+  margin-bottom: 50px;
+  width: 100%;
+  background-color: #98e1f292; /* leicht transparentes Weiß */
+  }
+/* Container für die Suchliste */
+.search {
+  width: 600px;        
+  margin: 0 auto;   
+  padding: 10px;
+  align-items: center;
+}
+
+/* Styling für das Suchfeld */
+.search input[type="text"] {
+  width: 100%;        
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Container für die Suchfelder BPM usw */
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styling für die Suchfelder BPM usw */
+.filter input[type="text"],
+.filter input[type="number"] {
+  width: 150px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+}
+
+.beat-list {
+  display: flex;
+  flex-direction: column; /* Items untereinander */
+  gap: 20px;              /* Abstand zwischen den Beats */
+  max-width: 1500px;
+  margin: auto;         /* Zentriert die Liste */
+  margin-bottom: 100px; /* Abstand zum unteren Rand */
+}
+
+.beat-item {
+  display: flex;
+  border-radius:20px;
+  padding: 5px;
+  align-items: stretch;
+  gap: 50px;
+}
+
+.beat-cover-box {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #000000;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 200px 800px rgba(0,0,0,0.1);
+  min-width: 150px;
+  height: 100%;
+}
+
+.beat-cover {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.beat-info-box {
+  background: #ffffffc1;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.beat-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.beat-info-box p {
+  margin: 10px;
+}
+
+.btn {
+  position: absolute;   /* absolut positionieren */
+  top: 5px;            /* Abstand vom oberen Rand der Info-Box */
+  right: 20px;          /* Abstand vom rechten Rand */
+  width: 80px;
+  padding: 8px 15px;
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 0;        /* margin-top entfernen */
+  align-self: unset;    /* align-self deaktivieren */
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1976d2;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffc1;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 100px;
+  height: 100%; /* ← passt sich automatisch der Höhe der Info-Box an */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.price {
+  font-weight: bold;
+  color: oklch(0% 0 0);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  margin-top: 0px;
+}
+
+footer div,
+footer div a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+  
+}
